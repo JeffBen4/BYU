@@ -14,5 +14,13 @@ class Program
 
         Console.WriteLine($"Your name is {last_name}, {first_name} {last_name}.");
 
+        
+        Console.Write("What is your favorite number? ");
+        string userInput= Console.ReadLine();
+        int number = int.Parse(userInput);
+
+        int numbers = 42;
+        string textVersion = numbers.ToString ();
+
     }
 }
