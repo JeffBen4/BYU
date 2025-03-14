@@ -6,19 +6,26 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
-        string response;
-        do
+
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(1,100);
+
+        Console.Write("What is your guess? ");
+        int response = int.Parse(Console.ReadLine());
+
+        while (number != response)
         {
-            Console.Write("Do you want to continue? ");
-            response = Console.ReadLine();
-
-        } while (response == "yes");
-
-
-        for (int i = 0; i < 10; i++)
-        {
-            Console.WriteLine(i);
+            if (response > number)
+            {
+                Console.WriteLine("Lower");
+            }
+            if (response < number)
+            {
+                Console.WriteLine("Higher");
+            }
         }
+        Console.WriteLine("You guessed it!");
+
         
 
     }
