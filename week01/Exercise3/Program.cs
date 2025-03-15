@@ -18,10 +18,14 @@ class Program
             if (response > number)
             {
                 Console.WriteLine("Lower");
+                Console.Write("Try again: ");
+                response = int.Parse(Console.ReadLine());
             }
             if (response < number)
             {
                 Console.WriteLine("Higher");
+                Console.Write("Try again: ");
+                response = int.Parse(Console.ReadLine());
             }
         }
         Console.WriteLine("You guessed it!");
